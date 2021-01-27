@@ -1,11 +1,16 @@
 # ChangeLog
 ## v#.#.#
+- renames the environment scripts to env_ccpsynerbi.* . Creates a symbolic link or a copy to env_ccppetmr.* for backward compatibility
 - Enabled HDF5 support for STIR by default (build C++ libraries for HDF5)
 - Fix some issues with finding Python [#472](https://github.com/SyneRBI/SIRF-SuperBuild/issues/472)
 - Add option `BUILD_TESTING_JSON` (default OFF)
+- added flag CC_9 and CXX_9 to pass to Gadgetron for build as it requires GCC9
+- added range-v3
 - Updated versions:
    - JSON: 3.9.1
    - SWIG: 4.0.2
+   - Gadgetron: master
+   - ACE: 6.5.9
 
 ## v2.2.0
 - Updated to reflect change from CCPPETMR to CCPSyneRBI.

@@ -394,8 +394,11 @@ export GADGETRON_HOME\n")
   set(ENV_GADGETRON_HOME_CSH "setenv GADGETRON_HOME ${SyneRBI_INSTALL}\n")
 endif()
 
-configure_file(env_ccppetmr.sh.in ${SyneRBI_INSTALL}/bin/env_ccppetmr.sh)
-configure_file(env_ccppetmr.csh.in ${SyneRBI_INSTALL}/bin/env_ccppetmr.csh)
+configure_file(env_ccppetmr.sh.in ${SyneRBI_INSTALL}/bin/env_ccpsynerbi.sh)
+configure_file(env_ccppetmr.csh.in ${SyneRBI_INSTALL}/bin/env_ccpsynerbi.csh)
+
+file(CREATE_LINK ${SyneRBI_INSTALL}/bin/env_ccpsynerbi.sh ${SyneRBI_INSTALL}/bin/env_ccppetmr.sh SYMBOLIC)
+file(CREATE_LINK ${SyneRBI_INSTALL}/bin/env_ccpsynerbi.csh ${SyneRBI_INSTALL}/bin/env_ccppetmr.csh SYMBOLIC)
 
 # add tests
 enable_testing()
