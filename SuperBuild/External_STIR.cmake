@@ -65,7 +65,7 @@ if(NOT ( DEFINED "USE_SYSTEM_${externalProjName}" AND "${USE_SYSTEM_${externalPr
   if (USE_ITK)
     list(APPEND ${proj}_DEPENDENCIES "ITK")
   endif()
-  if (BUILD_STIR_SWIG_PYTHON)
+  if (STIR_BUILD_SWIG_PYTHON)
     list(APPEND ${proj}_DEPENDENCIES "SWIG")
   endif()
   if (USE_NiftyPET)
