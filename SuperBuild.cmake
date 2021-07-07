@@ -46,10 +46,9 @@ endif()
 
 # Find CUDA
 option(DISABLE_CUDA "Disable CUDA" OFF)
-if (NOT DISABLE_CUDA)
-  find_package(CUDA)
-endif()
-if (NOT DISABLE_CUDA AND CUDA_FOUND)
+
+if (NOT DISABLE_CUDA) 
+  find_package(CUDA REQUIRED) 
   message(STATUS "<<<<<<<<<<<<<<<<< CUDA FOUND >>>>>>>>>>>>>>>>>>>>>")
   message(STATUS "Will enable CUDA dependencies where possible.")
   set(USE_CUDA ON CACHE INTERNAL "Use CUDA")
